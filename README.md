@@ -66,11 +66,9 @@ echo "# git-steps" >> README.md
 ## Next Steps
 
 - From here on out it is just pushing and pulling as each partner switches off.
-
     - To pull the most recent changes pushed by your partner run `git pull`
         - This will pull from origin main, the original GitHub repo created by
         Person 1
-
     - To push the most recent changes you have made run `git push` or 
     `git push origin main`
         - This will push to origin main, the original GitHub repo created by
