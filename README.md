@@ -6,8 +6,8 @@
     - It should be public
     - Name something like WXDX
 
-2. On your computer cd to where you’ll store your classwork for the day and make 
-a new folder:
+2. On your computer `cd` to where you wish to store your classwork for the day 
+and make a new folder
     - `mkdir WXDX` - keep naming convention the same as you did for GitHub
         - Note: Should NOT be in another git repo
             - double check by running `git status` at in the folder that your new `WXDX` is in
@@ -37,35 +37,41 @@ echo "# git-steps" >> README.md
     3. Invite collaborator using your pair’s GitHub username
 
 ## Person 2 - The cloner:
+1. Accept the Collaborator invitation via email
+
+2. Retrieve the clone link from your partner's GitHub
+    - Click the green `<> Code` button
+    - Copy the HTTPS url 
+
+3. On your computer `cd` to where you wish to store your classwork for the day
+    - Do NOT make a new folder for `WXDX` 
+        - It will be made automatically when you clone your partner's repo
+    - Run `git clone <copied clone link>`
+    - You now have cloned your partner's repo and have push/pull access
+
+### Optional: Add a copy of your shared work to your own GitHub
 1. Make new remote repository on GitHub
-    - it should be public
-    - name should match the repo you will be cloning
-2. Navigate to a local folder where you’ll ‘store your classwork’
-    - Do NOT make a new subfolder for wXdY - that will be made when cloning
-    - Double check that you are not within an existing git repo by running git status
-3. Clone your pair’s repo
-    - (Either following the link from your pair or they can directly send you the url you’ll need to clone)
-4. Within the newly cloned repo, run git remote - you’ll see the source of the clone is automatically added as a remote named origin
-5. Add a new remote with YOUR remote GitHub repository
-    - Still just git remote add <name for remote> <remote url>
-    - Name the remote your name (for example git remote add daniel https://github.com/danielsgithub/w40d3 )
-6. Run git remote to verify/show you now have two remotes
-7. Push to your GitHub repository to verify that your remote is set up properly
-    - you HAVE to specify where you’re pushing, as just git push will push to origin
-    - ex: git push peter main
-8. Make a change to the files (representing your turn driving), add, commit
-9. Push the change to origin by just running git push or by running git push origin main
-    - you CAN push to both, but no need to do that every time you switch
-10. Change will have been made to your pair’s remote repo, but not to yours!
+    - It should be public
+    - The name should match the repo you have cloned
+2. In the repo you cloned add a new remote to your freshly made GitHub repo
+    - run `git remote add my_github <url to your GitHub repo>.git`
+3. Push up all code from your local machine to your GitHub repo
+    - run `git push my_github main`
+4. You can now push changes to your partner's GitHub repo and your own.
+    - To push to your partner's GitHub Repo run `git push` or 
+    `git push origin main`
+    - To push to your own GitHub repo run `git push my_github main`
+    - NOTE: You only need to push to your own GitHub repo at the end of the day.
 
-Person 1:
-1. Pull changes from origin
-2. Will be exactly where your pair left off
-3. Make changes to the code
-4. Add/commit/push to origin
+## Next Steps
 
-Person 2:
-1. Pull changes from origin
-2. Make changes (representing the last work of the day) and add/commit
-3. Push to origin and then also push to YOUR remote repo - BOTH will have the final state of the project
-4. Add link to repo to PT for the day, where it asks for your classwork repo (edited)
+- From here on out it is just pushing and pulling as each partner switches off.
+
+    - To pull the most recent changes pushed by your partner run `git pull`
+        - This will pull from origin main, the original GitHub repo created by
+        Person 1
+
+    - To push the most recent changes you have made run `git push` or 
+    `git push origin main`
+        - This will push to origin main, the original GitHub repo created by
+        Person 1
